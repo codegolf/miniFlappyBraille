@@ -8,7 +8,7 @@ Play with arrows up and down.
 
 demo (unminified, ES5): http://codegolf.github.io/miniFlappyBraille
 
-demo (golfed, ES6): http://codegolf.github.io/miniFlappyBraille/index.min.html
+demo (golfed, dirtier, ES6): http://codegolf.github.io/miniFlappyBraille/index.min.html
 
 source code (264b)
 
