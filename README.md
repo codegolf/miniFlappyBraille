@@ -10,7 +10,7 @@ demo (unminified, ES5): http://codegolf.github.io/miniFlappyBraille
 
 demo (golfed, dirtier, ES6): http://codegolf.github.io/miniFlappyBraille/index.min.html
 
-source code (258b)
+source code (258b / 240 chars)
 
 ````
 b=[c=""];for(d=e=f=g=i=0;500>i;i++)c+="  "+"⡆
