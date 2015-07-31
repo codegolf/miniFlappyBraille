@@ -1,6 +1,6 @@
 <meta charset=utf-8><script>
 obstacles = [pos = frame = score = obstacle = 0];
-for(i = 0; i < 999; i++) obstacles.push(4*Math.random()|1);
+for(i = 0; i < 999; i++) obstacles.push(4 * Math.random() | 0);
 onkeyup = function(e){
     if(e.keyCode == 38 && pos > 0) pos--;
     if(e.keyCode == 40 && pos < 3) pos++;
