@@ -1,79 +1,34 @@
-<meta charset=utf-8>
-<pre id=p></pre>
-<script>
-pos = 2;
-pos0 = "\u2801"; // ⠁
-pos1 = "\u2802"; // ⠂
-pos2 = "\u2804"; // ⠄
-pos3 = "\u2840"; // ⡀
-pass = "\u2847"; // ⡇
-hole0 = "\u2846"; // ⡆
-hole1 = "\u2845"; // ⡅
-hole2 = "\u2843"; // ⡃
-hole3 = "\u2807"; // ⠇
-die = "\u2620"; // ☠
-prefix = "";
-suffix = "";
-frame = 0;
-obstacle = 0;
-score = 0;
-
-obstacles = [];
-for(i = 0; i < 999; i++){
-	obstacles.push(~~(Math.random()*4));
-}
-
+<meta charset=utf-8><script>
+obstacles = [pos = frame = score = obstacle = 0];
+for(i = 0; i < 999; i++) obstacles.push(4*Math.random()|1);
 onkeyup = function(e){
-		if(e.keyCode == 38){
-			pos--;
-			if(pos < 0){
-				pos = 0;
-			}
-		}
-		
-		if(e.keyCode == 40){
-			pos++;
-			if(pos > 3){
-				pos = 3;
-			}
-		}
+    if(e.keyCode == 38 && pos > 0) pos--;
+    if(e.keyCode == 40 && pos < 3) pos++;
 }
-
 s = setInterval(function(){
+
 	// obstacle
-	if(frame / 10 > 9 && frame / 10 % 3 == 0){
-		
+	if(frame > 3 && !(frame % 30)){
+    
 		// pass
-		if(obstacles[obstacle] == pos){
-			prefix = pass;
+		if(obstacles[obstacle++] == pos){
+			prefix = "⡇";
 			score++;
 		}
-		
+        
 		// fail
 		else {
-			prefix = die;
 			clearInterval(s);
-			alert(score);
+			alert("☠" + score);
 		}
-		
-		obstacle ++;
 	}
-	
+    
 	// no obstacle
-	else {
-		prefix = [pos0,pos1,pos2,pos3][pos];
-	}
-	
+	else prefix = "⠁⠂⠄⡀"[pos];
+    
 	// draw current frame
-	p.innerHTML = prefix;
-	suffix = "         ";
-	for(i = 0; i < 999; i++){
-		suffix += "  " + [hole0,hole1,hole2,hole3][obstacles[i]];
-	}
-	
-	p.innerHTML = prefix + suffix.slice(frame / 10);
-	frame++;
-	
+	suffix = "";
+	for(i = 0; i < 999; i++) suffix += "  " + "⡆⡅⡃⠇"[obstacles[i]];
+    history.replaceState(0,0,"# "+(prefix + suffix.slice(frame++ / 10)).slice(0,99));
 }, 30);
-
 </script>
