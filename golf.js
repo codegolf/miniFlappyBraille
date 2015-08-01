@@ -1,1 +1,1 @@
-b=[c=""];for(d=e=f=g=i=0;99>i;i++)c+="  "+"⡆⡅⡃⠇"[b[i]=4*Math.random()|0];onkeyup=a=>d+=a.which-39;setInterval('d=0>d?0:3<d?3:d;3<e&&!(e%27)?i&&b[g++]==d?f++:i=0:h="⠈⠐⠠⢀"[d];location.hash=i?h+c.slice(e++/9):f',27)
+b=[c=""];for(d=e=f=g=i=0;99>i;i++)c+="  "+"⡆⡅⡃⠇"[b[i]=4*Math.random()|0];onkeyup=a=>d+=a.which-39;setInterval('3<e&&!(e%27)?i&&b[g++]==d?f++:i=0:h="⠈⠐⠠⢀"[d];location.hash=i?[h]+c.slice(e++/9):f',27)
