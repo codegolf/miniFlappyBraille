@@ -30,7 +30,7 @@ s = setInterval(function(){
 	}
     
 	// no obstacle
-	else prefix = "⠁⠂⠄⡀"[pos];
+	else prefix = "⠈⠐⠠⢀"[pos];
     
 	// draw current frame
     history.replaceState(0,0,"# "+(prefix + suffix.slice(frame++ / 10)).slice(0,99));
