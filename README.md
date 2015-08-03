@@ -11,7 +11,7 @@ golfed by @xem, @ilesinge, @aemkei, @subzey, @p01, ...
 
 **demo 2** (golfed, dirtier, ES6): http://codegolf.github.io/miniFlappyBraille/index.min.html
 
-source code (204b / 188 chars)
+source code (201b / 185 chars)
 
 ````
 g=b=[c=""];for(d=e=f=i=0;g;onkeyup=a=>d+=a.which-39)c+="  "+"⡆⡅⡃⠇"[b[i++]=(g=7*++g%97)%4];setInterval('e<4||e%27?i:i&&b[g++]==d?f++:i=0;location.hash=i?["⠈⠐⠠⢀"[d]]+c.slice(e++/9):f',27)
@@ -19,42 +19,8 @@ g=b=[c=""];for(d=e=f=i=0;g;onkeyup=a=>d+=a.which-39)c+="  "+"⡆⡅⡃⠇"[b[i++
 
 **demo 3** (golfed, obfuscated in braille): http://codegolf.github.io/miniFlappyBraille/index.min.braille.html
 
-source code (758b / 282 chars) (not up to date)
+(update soon)
 
-````
-eval(unescape(escape("⡢⠽⡛⡣⠽⠢⠢⡝⠻⡦⡯⡲⠨⡤⠽⡥⠽⡦⠽⡧⠽⡩⠽⠰⠻⠹⠹⠾⡩⠻⠩⡣⠫⠽⠢⠠⠠⠢⠫⠢⡜⡵⠲⠸⠴⠶⡜⡵⠲⠸⠴⠵⡜⡵⠲⠸⠴⠳⡜⡵⠲⠸⠰⠷⠢⡛⡢⡛⡩⠫⠫⡝⠽⠴⠪⡍⡡⡴⡨⠮⡲⡡⡮⡤⡯⡭⠨⠩⡼⠰⡝⠻⡯⡮⡫⡥⡹⡵⡰⠽⡡⠽⠾⡤⠫⠽⡡⠮⡷⡨⡩⡣⡨⠭⠳⠹⠻⡳⡥⡴⡉⡮⡴⡥⡲⡶⡡⡬⠨⠧⠳⠼⡥⠦⠦⠡⠨⡥⠥⠲⠷⠩⠿⡩⠦⠦⡢⡛⡧⠫⠫⡝⠽⠽⡤⠿⡦⠫⠫⠺⡩⠽⠰⠺⡨⠽⠢⡜⡵⠲⠸⠰⠸⡜⡵⠲⠸⠱⠰⡜⡵⠲⠸⠲⠰⡜⡵⠲⠸⠸⠰⠢⡛⡤⡝⠻⡬⡯⡣⡡⡴⡩⡯⡮⠮⡨⡡⡳⡨⠽⡩⠿⡛⡨⡝⠫⡣⠮⡳⡬⡩⡣⡥⠨⡥⠫⠫⠯⠹⠩⠺⡦⠧⠬⠲⠷⠩").replace(/u../g,'')))
-````
 
-Source code shaped like a pipe:
-
-````
-
-  eval(unescape(escape
-  ('⡢⠽⡛⡣⠽⠢⠢⡝⠻⡦⡯⡲⠨⡤⠽⡥⠽\
-  ⡦⠽⡧⠽⡩⠽⠰⠻⠹⠹⠾⡩⠻⠩⡣⠫⠽⠢⠠\
-  ⠠⠢⠫⠢⡜⡵⠲⠸⠴⠶⡜⡵⠲⠸⠴⠵⡜⡵⠲\
-  ⠸⠴⠳⡜⡵⠲⠸⠰⠷⠢⡛⡢⡛⡩⠫⠫⡝⠽⠴\
-  ⠪⡍⡡⡴⡨⠮⡲⡡⡮⡤⡯⡭⠨⠩⡼⠰⡝⠻⡯\
-       ⡮⡫⡥⡹⡵⡰⠽⡡⠽\
-       ⠾⡤⠫⠽⡡⠮⡷⡨⡩\
-       ⡣⡨⠭⠳⠹⠻⡳⡥⡴\
-       ⡉⡮⡴⡥⡲⡶⡡⡬⠨\
-       ⠧⠳⠼⡥⠦⠦⠡⠨⡥\
-       ⠥⠲⠷⠩⠿⡩⠦⠦⡢\
-       ⡛⡧⠫⠫⡝⠽⠽⡤⠿\
-       ⡦⠫⠫⠺⡩⠽⠰⠺⡨\
-       ⠽⠢⡜⡵⠲⠸⠰⠸⡜\
-       ⡵⠲⠸⠱⠰⡜⡵⠲⠸\
-       ⠲⠰⡜⡵⠲⠸⠸⠰⠢\
-       ⡛⡤⡝⠻⡬⡯⡣⡡⡴\
-       ⡩⡯⡮⠮⡨⡡⡳⡨⠽\
-       ⡩⠿⡛⡨⡝⠫⡣⠮⡳\
-       ⡬⡩⡣⡥⠨⡥⠫⠫⠯\
-       ⠹⠩⠺⡦⠧⠬⠲⠷⠩'
-       ).replace(
-       /%20|u../g
-       ,'')))//<3
-
-````
 
 **You can also play by executing the snippets above in your JS console!**
